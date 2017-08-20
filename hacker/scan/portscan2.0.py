@@ -2,7 +2,13 @@
 # -*- coding:utf-8 -*-
 from socket import *
 import threading
-
+'''
+    升级版，实现端口扫描的功能并使用多线程
+    1.通过socket模块,判断是否连接成功
+    2.连接成功即为该端口开放，否则为关闭
+    3.加入threading模块，大幅提高扫面速度
+    缺点：ip为固定
+'''
 lock = threading.Lock()
 openNum = 0
 threads = []
